@@ -1,14 +1,13 @@
-import mainPage from '../pages/MainPage';
+import SignInPage from '../pageObjects/pages/SignInPage';
+import { url } from '../pageObjects/Data';
 
-Cypress.Commands.add('logInAccount', (email, password) => {
-  mainPage.usernameInput().type(email).should('have.value', email);
-  mainPage.passwordInput().type(password).should('have.value', password);
-  mainPage.cookieBtn().click();
-  mainPage.signInBtn().click();
+Cypress.Commands.add('open', () => {
+  cy.visit(url);
 });
 
 Cypress.Commands.add('signIn', (email, password) => {
-  mainPage.usernameInput().type(email).should('have.value', email);
-  mainPage.passwordInput().type(password).should('have.value', password);
+  SignInPage.usernameInput().type(email).should('have.value', email);
+  SignInPage.passwordInput().type(password).should('have.value', password);
 });
 
+require('@cypress/xpath');
