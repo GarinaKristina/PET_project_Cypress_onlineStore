@@ -7,4 +7,4 @@ Additionally, this framework saved results in screenshots and videos.
 Basically, in the framework, you can only work with selectors, for convenience, I installed an additional plagin "cypress-xpath", it mean now I can use xpath locators too.
 
 The reporter in this project "cypress-mochawesome-reporter", after running tests report auto-generates an HTML file and you can easily see all results.
-![Image alt](https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png)
+![Screenshot reporter result](https://github.com/GarinaKristina/PET_project_Cypress_onlineStore/blob/main/resultForReadMe.jpg)
