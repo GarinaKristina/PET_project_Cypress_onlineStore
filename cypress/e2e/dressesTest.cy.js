@@ -10,8 +10,8 @@ context('As a customer I could choose the items', () => {
   it('dresses items existing on the menu, title contain "Dresses"', () => {
     menuComponents.menuIcon().should('be.visible');
     menuComponents.menuIcon().click();
-    // menuComponents.ladiesButton().click();
-    // menuComponents.dressesButton().should('be.visible').click({ force: true, multiple: true });
-    // cy.title().should('contain', 'Dresses');
+    menuComponents.ladiesButton().click();
+    menuComponents.dressesButton().should('be.visible').click({ force: true, multiple: true });
+    cy.title().should('contain', 'Dresses');
   });
 });
