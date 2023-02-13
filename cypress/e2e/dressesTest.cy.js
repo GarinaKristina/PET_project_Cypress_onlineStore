@@ -1,11 +1,11 @@
-import mainPage from '../pageObjects/pages/MainPage';
+import { MainPage } from '../pageObjects/pages/index';
 import menuComponents from '../pageObjects/components/menuComponents';
 
-context('HM online store', () => {
+context('As a customer I could choose the items', () => {
   beforeEach(() => {
     Cypress.Cookies.debug(true);
     cy.open();
-    mainPage.acceptButton().click();
+    MainPage.acceptButton().click();
   });
   it('dresses items existing on the menu, title contain "Dresses"', () => {
     menuComponents.menuIcon().should('be.visible');

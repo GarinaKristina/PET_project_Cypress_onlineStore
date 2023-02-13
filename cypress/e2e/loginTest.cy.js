@@ -1,14 +1,14 @@
-import mainPage from '../pageObjects/pages/MainPage';
 import { customerData } from '../pageObjects/Data';
+import { MainPage } from '../pageObjects/pages/index';
 
-context('HM online store', () => {
+context('Possibilities to log in as a customer', () => {
   beforeEach(() => {
     Cypress.Cookies.debug(true);
     cy.open();
-    mainPage.acceptButton().click();
+    MainPage.acceptButton().click();
   });
-  it('should sign in an account', () => {
-    mainPage.accountButton().click();
+  it('should log in an account', () => {
+    MainPage.accountButton().click();
     cy.signIn(customerData.email, customerData.password);
   });
 });
